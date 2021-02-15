@@ -5,22 +5,73 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="./js/app.js" ></script>
-    <link href="./css/style.css" rel="stylesheet" />
+    
+    <link href='./css/style.css' rel='stylesheet' />
+    
+    <link  src="path/to/font-awesome/css/font-awesome.min.css">
 </head>
 <body>
-    
-    <!-- you need to add eslit to our code to prevent using var and use camol name -->
-    <!-- use strict in javascript file to not allow usin undifined varibales -->
-    <!-- Short bio, contains your education history, 
+
+        <!-- you need to add eslit to our code to prevent using var and use camol name -->
+        <!-- use strict in javascript file to not allow usin undifined varibales -->
+        <!-- Short bio, contains your education history, 
         overview of your job experience, 
         and any goals that you may have  --> 
-         <!-- add a prompt to get the user name and alert it with welecom massage -->
+        <!-- add a prompt to get the user name and alert it with welecom massage -->
         <!-- prompt 5 y/n questions (constrain)==> user should input just y/n yes/no-->
         <!-- take into consedration the case sensitivity of the user input -->
         <!-- the user should know if they answered the question correctly ==> using alert -->
         <!-- console.log a response for the user and comment them before deploy -->
        
+
+        <main>
+            <section class="glass__container">
+                <div class="dashboard">
+                    <div class="user">
+                        <img class="avatar__img" src="img/avatar.jpg" alt="">
+                        <h3>Ibrahim Banat</h3>
+                        <p>Software Developer</p>
+                    </div>
+                    <div class="dashboard__container">
+                        <div class="link">
+                            <i class="fa fa-wpexplorer fa-3x" aria-hidden="true"></i>
+                            <h2 onclick="aboutView()">About Me</h2>
+                        </div> 
+                        <div class="link">
+                            <i class="fa fa-wpexplorer fa-3x" aria-hidden="true"></i>
+                            <h2 onclick="questionView()">Questions</h2>
+                        </div> 
+                        
+                    </div> 
+                    
+    
+                </div>
+                <div class="content">
+                    <div class="card" id="card">
+                        <div class="card__header">Guessing Game</div>
+                        <div class="card__desc1">if you want to know more about me you can press the about me tap!</div>
+                        <div class="card__desc">Ibrahim Banat</div>
+                    </div>
+                    <div id="about">I am Ibrahim Banat 23 years old, A software engineer from jordan, i am friendly, charming and clever person who can impress you with quick wit and inscisive humor.<br><br>
+                    My Favoriate music genres is classical and metal music, I love to play chess and sports like running, listen to podcasts and read about psychology, philosophy, doctrine, quantum physics and technolog</div>
+                    <div id="questions">
+                        <p> Do you think i am a metal music fan ?</p>
+                        <p> Do you think i hold a dual Citizenship ?</p>
+                        <p> Do you think i love debating ?</p>
+                        <p> Do you think i am a feeler person ?</p>
+                        <p> Do you think i am an athiest ?</p>
+                    </div>
+                </div>
+                
+            </section>
+        </main>
+        <div class="circle1"></div>
+        <div class="circle2"></div>
+        
+    
+    
+        <script src="https://use.fontawesome.com/835e24680d.js"></script>
+        <script src="./js/app.js" ></script>
         
 </body>
 </html>
