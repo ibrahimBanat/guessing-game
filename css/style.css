@@ -108,8 +108,8 @@ section {
     width: 100%;
     position: relative;
     opacity: 0.0;
-    animation: fadeIn ease 5s;
-    -webkit-animation: fadeIn ease 5s;
+    animation: fadeIn ease 15s;
+    -webkit-animation: fadeIn ease 15s;
 
 }
 
@@ -130,7 +130,7 @@ section {
 
 
 .circle1{
-    animation: rotate 5s linear 0s infinite forwards reverse;
+    animation: rotate 5s linear 3s infinite forwards reverse;
 }
 
 
@@ -146,8 +146,8 @@ section {
     color: rgb(88, 100, 109);
     line-height: 25px;
     opacity: 0.0;
-    animation: fadeIn ease 5s;
-    -webkit-animation: fadeIn ease 5s;
+    animation: fadeIn ease 25s;
+    -webkit-animation: fadeIn ease 25s;
 }
 
 #questions { 
@@ -167,8 +167,8 @@ section {
     /* padding: 30px; */
     /* position: relative; */
     opacity: 0.0;
-    animation: fadeIn ease 5s;
-    -webkit-animation: fadeIn ease 5s;
+    animation: fadeIn ease 25s;
+    -webkit-animation: fadeIn ease 25s;
     
     
 }
