@@ -107,9 +107,8 @@ section {
     height: 100%;
     width: 100%;
     position: relative;
-    opacity: 0.0;
-    animation: fadeIn ease 15s;
-    -webkit-animation: fadeIn ease 15s;
+    
+    animation: fadeIn ease-in 3s;
 
 }
 
@@ -146,9 +145,8 @@ section {
     font-size: 18px;
     color: rgb(88, 100, 109);
     line-height: 25px;
-    opacity: 0.0;
-    animation: fadeIn ease 25s;
-    -webkit-animation: fadeIn ease 25s;
+    
+    animation: fadeIn ease-in 3s;
 }
 
 #questions { 
@@ -167,9 +165,10 @@ section {
     /* bottom: 50%; */
     /* padding: 30px; */
     /* position: relative; */
-    opacity: 0.0;
-    animation: fadeIn ease 25s;
-    -webkit-animation: fadeIn ease 25s;
+    /* opacity: 0.0; */
+    animation: fadeIn ease-in 3s;
+    /* -webkit-animation: fadeIn ease 25s; */
+    /* cubic-bezier(.62,.02,1,.28); */
     
     
 }
