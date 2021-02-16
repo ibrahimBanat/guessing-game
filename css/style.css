@@ -13,7 +13,7 @@ html {
 
 main { 
     min-height: 100vh;
-    background: linear-gradient(to right top, #F894A4, #F9D1B7);
+    background: linear-gradient(to right top, #96deda  , #50c9c3);
     display:flex;
     justify-content: center;
     align-items: center;
@@ -130,7 +130,8 @@ section {
 
 
 .circle1{
-    animation: rotate 5s linear 3s infinite forwards reverse;
+    animation: rotate 5s linear 0s infinite forwards reverse;
+    transition: ease 0.5s all;
 }
 
 
@@ -195,6 +196,18 @@ section {
     @-ms-keyframes fadeIn {
     0% {opacity:0;}
     100% {opacity:1;}
+}
+@keyframes rotate {
+	from {
+		transform: rotate(0deg)
+		           translate(-1em)
+		           rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg)
+		           translate(-1em) 
+		           rotate(-360deg);
+	}
 }
 
 #questions > p  {
