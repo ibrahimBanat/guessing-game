@@ -110,6 +110,8 @@ section {
     
     animation: fadeIn ease-in 3s;
 
+    font-family: 'Anaheim', sans-serif;
+
 }
 
 .content {
@@ -172,6 +174,8 @@ section {
     
     
 }
+
+
 @keyframes fadeIn {
     0% {opacity:0;}
     100% {opacity:1;}
@@ -213,3 +217,28 @@ section {
     margin: 25px;
 }
 
+
+.user > h3  {
+    font-family: 'Rajdhani', sans-serif;
+    
+    font-size: 22px;
+    line-height: 8px;
+    margin-top: 20px;
+    color: rgb(88, 100, 109);
+}
+.user > p { 
+    font-family: 'Yellowtail', cursive;
+    font-size: 16px;
+    margin-top: 20px;
+    color: rgb(88, 100, 109);
+}
+
+.link { 
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 600;
+    color: rgb(88, 100, 109); 
+}
+
+.link:hover { 
+    cursor: pointer;
+}
