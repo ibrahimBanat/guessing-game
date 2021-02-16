@@ -17,6 +17,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Anaheim&display=swap" rel="stylesheet">
 </head>
 <body>
+        <!-- LAB 2 INSTRUCTIONS -->
 
         <!-- you need to add eslit to our code to prevent using var and use camol name -->
         <!-- use strict in javascript file to not allow usin undifined varibales -->
@@ -29,8 +30,20 @@
         <!-- the user should know if they answered the question correctly ==> using alert -->
         <!-- console.log a response for the user and comment them before deploy -->
        
+        <!-- LAB 3 INSTRUCTIONS -->
 
+        <!-- Creat top 10at the bottom of your html page -->
+        <!-- Convert Work & education to unordered list -->
+        
+        <header class="header">
+            <div class="logo">
+                <img  width ="50px" height="50px" src="img/logo.png" alt="">
+                <h3 id="head__desc" class="animation">My Portfolio</h3>
+            </div>
+            <button onclick="top10View(); headerChanger('Top 10')">Top 10</button>
+        </header>
         <main>
+            
             <section class="glass__container">
                 <div class="dashboard">
                     <div class="user">
@@ -39,12 +52,12 @@
                         <p>Software Developer</p>
                     </div>
                     <div class="dashboard__container">
-                        <div class="link" onclick="aboutView()">
+                        <div class="link" onclick="aboutView(); headerChanger('About')">
                             <i class="fa fa-user-circle fa-2x" aria-hidden="true"></i>
                             
                             <h2>About</h2>
                         </div> 
-                        <div class="link" onclick="questionView()">
+                        <div class="link" onclick="questionView(); headerChanger('Questions')">
                             <i class="fa fa-question fa-2x" aria-hidden="true"></i>
                             <h2>Questions</h2>
                         </div> 
@@ -68,7 +81,24 @@
                         <p> Do you think i am a feeler person ?</p>
                         <p> Do you think i am an athiest ?</p>
                     </div>
+                    <div id="top__10">
+                        <h3>My top 10 series</h3>
+                        <ol>
+                            <li>Game of throns</li>
+                            <li>Breaking bad</li>
+                            <li>Rick and Morty</li>
+                            <li>Hannibal</li>
+                            <li>Dexter</li>
+                            <li>WestWorld</li>
+                            <li>How i met your mother</li>
+                            <li>Bojack horseman</li>
+                            <li>One piece</li>
+                            <li>Friends</li>
+                        </ol>
+                    </div>
                 </div>
+
+                
                 
             </section>
         </main>
