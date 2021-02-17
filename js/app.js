@@ -26,17 +26,17 @@ function askingForInput() {
 
   let gusseMyJob = prompt('Do you think i love debating? answer with yes/no - y/n');
   answerAfterCheck = checkInput(gusseMyJob, 'Do you think i love debating? answer with yes/no - y/n');
-  (answerAfterCheck === 'yes' || answerAfterCheck === 'y') ? (alert('you are right, i am ENTP(search for mbti) which is called (Devil\'s Advocate)'), score++) : alert('hold my beer! we have to go back');
+  (answerAfterCheck === 'yes' || answerAfterCheck === 'y') ? (alert('you are right, but I don\'t call it debating, I love it() because it\'s fun, and I tend to be good at things I enjoy'), score++) : alert('hold my beer! we have to go back');
   // console.log((answerAfterCheck === 'yes' || answerAfterCheck === 'y')? 'you are correct': 'who do you think built this website!');
 
   let guessMyNationallaty = prompt('Do you think i am a feeler person ? answer with yes/no - y/n');
   answerAfterCheck = checkInput(guessMyNationallaty, 'Do you think i am a feeler person ? answer with yes/no - y/n');
-  (answerAfterCheck === 'yes' || answerAfterCheck === 'y') ? alert('nope! i am a rational person who love debating in philosophical way') : (alert('you are right, i am a rational person who love debating in philosophical way'), score++);
+  (answerAfterCheck === 'yes' || answerAfterCheck === 'y') ? alert('nope! I am kind of personality which tend to mentally active, constanly questioning and pondering.') : (alert('you are right, I\'m a thinker with an innate to drive to decipher life\'s mysteries'), score++);
   // console.log((answerAfterCheck === 'yes' || answerAfterCheck === 'y')? 'you are correct': 'no i have a dual citzenship');
 
   let guessMyTall = prompt('Do you think i am an athiest ? answer with yes/no - y/n');
   answerAfterCheck = checkInput(guessMyTall, 'Do you think i am an athiest ? answer with yes/no - y/n');
-  (answerAfterCheck === 'yes' || answerAfterCheck === 'y') ? alert('why would you think of this?') : (alert('you are right i am even reading in doctrine'), score++);
+  (answerAfterCheck === 'yes' || answerAfterCheck === 'y') ? alert('why would you think of this?') : (alert('you are right, even i don\'t mind thinking or arguing in doctrine things with atheists but I\'m not athiest'), score++);
   // console.log((answerAfterCheck === 'yes' || answerAfterCheck === 'y')? 'you are correct': 'am i look short in my pics?');
 
 }
@@ -54,10 +54,16 @@ function checkInput(userAnswer, promptQuestion) {
 }
 
 function guessingNumber() {
+  // add more question takes a numiric input use propmt
+  // use too high too low hints for the number
+  // give the user 4 oppurtonities
+  // use loop and tell the user the correct answer
+
   let guess = Number(prompt('Try to guess the number'));
   // console.log(guess);
   let myNum = Math.floor(Math.random() * 10 + 1); // 0.0 - 1
   // strict (4 attempts)
+
   for (let index = 0; index < 4; index++) {
     let attempts;
     if (guess > myNum) {
@@ -85,6 +91,11 @@ function guessingNumber() {
 }
 
 function guessingArray() {
+  // add more question that have many possibalites stored in array
+  // give user 6 attempts to guess the correct answer
+  // the game will end once the user gueesed it right or he ran out of attempts
+  // use loop for this feature
+  // console.log through the code to track the q
   let myFavArr = ['The Shawshank Redemption', 'The Godfather', 'Schindler\'s List', 'Inception'];
 
   let guess = prompt('Try to guess my favorite Movies');
@@ -143,6 +154,7 @@ function questionView() {
   document.getElementById('top__10').style.display = 'none';
 }
 
+
 function top10View() {
   document.getElementById('top__10').style.display = 'flex';
   document.getElementById('about').style.display = 'none';
@@ -164,13 +176,5 @@ guessingArray();
 alert('Your score is: ' + score + '/7');
 
 // Lab 3 instructions
-// add more question takes a numiric input use propmt
-// use too high too low hints for the number
-// give the user 4 oppurtonities
-// use loop and tell the user the correct answer
 
-// add more question that have many possibalites stored in array
-// give user 6 attempts to guess the correct answer
-// the game will end once the user gueesed it right or he ran out of attempts
-// use loop for this feature
-// console.log through the code to track the q
+
