@@ -1,6 +1,7 @@
 'use strict';
 
 
+
 let score = 0;
 
 function wlecomingUser() {
@@ -100,12 +101,18 @@ function guessingArray() {
 
   let guess = prompt('Try to guess my favorite Movies');
   // console.log(guess);
+   let attempt = 6;
 
+   let trueAttempts;
   // strict (6 attempts)
   for (let index = 0; index < 6; index++) {
     // let attempts;
     // attempts = 3 - index;
     //   guess = prompt('Try to guess my favorite Movies, left attempts: ' + attempts);
+
+      attempt --;
+      console.log(attempt);
+
     let condition = false;
     // alert(1);
     for (let item = 0; item < myFavArr.length; item++) {
@@ -117,6 +124,7 @@ function guessingArray() {
       if (guess === myFavArr[item]) {
         // alert(3);
         console.log(guess === myFavArr[item]);
+        
         condition = true;
         break;
       }
@@ -125,11 +133,12 @@ function guessingArray() {
 
     if (condition) {
       // alert(4);
-      alert('you guessed it right!');
+      trueAttempts = index+1;
+      alert('you guessed it right! with: '+ trueAttempts);
       score++;
       break;
     }
-    alert('You are wrong! try again');
+    alert('You are wrong! try again, attempts left '+attempt);
     guess = prompt('Try to guess my favorite Movies');
 
     // alert(5);
