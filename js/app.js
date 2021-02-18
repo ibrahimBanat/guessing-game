@@ -1,7 +1,51 @@
 'use strict';
-
-
 let score = 0;
+
+let promptTexts = {
+  consoleMessage : {
+    message: 'asking user ',
+    restMessage : ' ==> '
+  },
+  question1: {
+    questionText: 'Do you think i am a metal music fan? answer with yes/no - y/n',
+    textForTrue: 'you are right, specially Doom/Death Metal 🎸',
+    textForFalse: 'Nope! In metal we belive 🤘'
+  },
+  question2: {
+    questionText: 'Do you think i hold a dual Citizenship? answer with yes/no - y/n',
+    textForTrue: 'you are right, I hold both indian/jordanian citizenships 🇮🇳 🇯🇴',
+    textForFalse: 'Nope! I hold both indian/jordanian citizenships 🇮🇳 🇯🇴'
+  },
+  question3: {
+    questionText: 'Do you think i love debating? answer with yes/no - y/n',
+    textForTrue: 'you are right, but I don\'t call it debating, I love it because it\'s fun, and I tend to be good at things I enjoy',
+    textForFalse: 'hold my beer! we have to go back'
+  },
+  question4: {
+    questionText: 'Do you think i am a feeler person ? answer with yes/no - y/n',
+    textForTrue: 'nope! I am kind of personality which tend to be mentally active, constanly questioning and pondering.',
+    textForFalse: 'you are right, I\'m a thinker with an innate to drive to decipher life\'s mysteries'
+  },
+  question5: {
+    questionText: 'Do you think i am an athiest ? answer with yes/no - y/n',
+    textForTrue: 'why would you think of this?',
+    textForFalse: 'you are right, even i don\'t mind thinking or arguing in doctrine things with atheists but I\'m not athiest'
+  },
+  guessingGame: {
+    questionText: 'Try to guess my favorite Movies',
+    rightGuess: 'you guessed it right!',
+    wrongGuess : 'You are wrong! try again'
+  },
+  guessingNumber: {
+    questionText: 'Try to guess the number',
+    tooHighNumber: 'you guess was higher!',
+    tooLowNumber: 'you guess was lower!',
+    rightGuess: 'you guess it right ',
+    gameOverMessage: 'Game Over! the correct guess is '
+  }
+
+
+};
 
 function wlecomingUser() {
   let gussetName = prompt('Please enter your name');
@@ -10,132 +54,96 @@ function wlecomingUser() {
 }
 
 function askingForInput() {
-
   let answerAfterCheck = '';
 
-  let favPet = prompt('Do you think i am a metal music fan? answer with yes/no - y/n');
-  answerAfterCheck = checkInput(favPet, 'Do you think i am a metal music fan? answer with yes/no - y/n');
-  (answerAfterCheck === 'yes' || answerAfterCheck === 'y') ? (alert('you are right, specially Doom/Death Metal 🎸'),score++) : alert('Nope! In metal we belive 🤘');
-  // console.log((answerAfterCheck === 'yes' || answerAfterCheck === 'y')? 'you are correct': 'why do you think that i\'m not caty person!');
+  let favPet = prompt(promptTexts.question1.questionText);
+  answerAfterCheck = checkInput(favPet, promptTexts.question1.questionText);
+  (answerAfterCheck === 'yes' || answerAfterCheck === 'y') ? (alert(promptTexts.question1.textForTrue),score++) : alert(promptTexts.question1.textForFalse);
+  console.log(`${promptTexts.consoleMessage.message}${promptTexts.question1.questionText}${promptTexts.consoleMessage.restMessage}`
+    ,(answerAfterCheck === 'yes' || answerAfterCheck === 'y')? promptTexts.question1.textForTrue : promptTexts.question1.textForFalse);
 
-  let gusseMyAge = prompt('Do you think i hold a dual Citizenship? answer with yes/no - y/n');
-  answerAfterCheck = checkInput(gusseMyAge, 'Do you think i hold a dual Citizenship? answer with yes/no - y/n');
-  (answerAfterCheck === 'yes' || answerAfterCheck === 'y') ? (alert('you are right, I hold both indian/jordanian citizenships 🇮🇳 🇯🇴'), score++) : alert('Nope! I hold both indian/jordanian citizenships 🇮🇳 🇯🇴');
-  // console.log((answerAfterCheck === 'yes' || answerAfterCheck === 'y')? 'you are correct': 'am i really look smaller than 25?');
+  let gusseMyAge = prompt(promptTexts.question2.questionText);
+  answerAfterCheck = checkInput(gusseMyAge, promptTexts.question2.questionText);
+  (answerAfterCheck === 'yes' || answerAfterCheck === 'y') ? (alert(promptTexts.question2.textForTrue), score++) : alert(promptTexts.question2.textForFalse);
+  console.log(`${promptTexts.consoleMessage.message}${promptTexts.question2.questionText}${promptTexts.consoleMessage.restMessage}`
+    ,(answerAfterCheck === 'yes' || answerAfterCheck === 'y')? promptTexts.question2.textForTrue : promptTexts.question2.textForFalse);
 
+  let gusseMyJob = prompt(promptTexts.question3.questionText);
+  answerAfterCheck = checkInput(gusseMyJob, promptTexts.question3.questionText);
+  (answerAfterCheck === 'yes' || answerAfterCheck === 'y') ? (alert(promptTexts.question3.textForTrue), score++) : alert(promptTexts.question3.textForFalse);
+  console.log(`${promptTexts.consoleMessage.message}${promptTexts.question3.questionText}${promptTexts.consoleMessage.restMessage}`
+    ,(answerAfterCheck === 'yes' || answerAfterCheck === 'y')? promptTexts.question3.textForTrue : promptTexts.question3.textForFalse);
 
-  let gusseMyJob = prompt('Do you think i love debating? answer with yes/no - y/n');
-  answerAfterCheck = checkInput(gusseMyJob, 'Do you think i love debating? answer with yes/no - y/n');
-  (answerAfterCheck === 'yes' || answerAfterCheck === 'y') ? (alert('you are right, but I don\'t call it debating, I love it() because it\'s fun, and I tend to be good at things I enjoy'), score++) : alert('hold my beer! we have to go back');
-  // console.log((answerAfterCheck === 'yes' || answerAfterCheck === 'y')? 'you are correct': 'who do you think built this website!');
+  let guessMyNationallaty = prompt(promptTexts.question4.questionText);
+  answerAfterCheck = checkInput(guessMyNationallaty, promptTexts.question4.questionText);
+  (answerAfterCheck === 'yes' || answerAfterCheck === 'y') ? alert(promptTexts.question4.textForTrue) : (alert(promptTexts.question4.textForFalse), score++);
+  console.log(`${promptTexts.consoleMessage.message}${promptTexts.question4.questionText}${promptTexts.consoleMessage.restMessage}`
+    ,(answerAfterCheck === 'yes' || answerAfterCheck === 'y')? promptTexts.question4.textForTrue : promptTexts.question4.textForFalse);
 
-  let guessMyNationallaty = prompt('Do you think i am a feeler person ? answer with yes/no - y/n');
-  answerAfterCheck = checkInput(guessMyNationallaty, 'Do you think i am a feeler person ? answer with yes/no - y/n');
-  (answerAfterCheck === 'yes' || answerAfterCheck === 'y') ? alert('nope! I am kind of personality which tend to mentally active, constanly questioning and pondering.') : (alert('you are right, I\'m a thinker with an innate to drive to decipher life\'s mysteries'), score++);
-  // console.log((answerAfterCheck === 'yes' || answerAfterCheck === 'y')? 'you are correct': 'no i have a dual citzenship');
-
-  let guessMyTall = prompt('Do you think i am an athiest ? answer with yes/no - y/n');
-  answerAfterCheck = checkInput(guessMyTall, 'Do you think i am an athiest ? answer with yes/no - y/n');
-  (answerAfterCheck === 'yes' || answerAfterCheck === 'y') ? alert('why would you think of this?') : (alert('you are right, even i don\'t mind thinking or arguing in doctrine things with atheists but I\'m not athiest'), score++);
-  // console.log((answerAfterCheck === 'yes' || answerAfterCheck === 'y')? 'you are correct': 'am i look short in my pics?');
-
+  let guessMyTall = prompt(promptTexts.question5.questionText);
+  answerAfterCheck = checkInput(guessMyTall, promptTexts.question5.questionText);
+  (answerAfterCheck === 'yes' || answerAfterCheck === 'y') ? alert(promptTexts.question5.textForTrue) : (alert(promptTexts.question5.textForFalse), score++);
+  console.log(`${promptTexts.consoleMessage.message}${promptTexts.question5.questionText}${promptTexts.consoleMessage.restMessage}`
+    ,(answerAfterCheck === 'yes' || answerAfterCheck === 'y')? promptTexts.question5.textForTrue : promptTexts.question5.textForFalse);
 }
 
-function checkInput(userAnswer, promptQuestion) {
 
-  // console.log('first one ', userAnswer);
+function checkInput(userAnswer, promptQuestion) {
   while (userAnswer.toLowerCase() !== 'yes' && userAnswer.toLowerCase() !== 'y' && userAnswer.toLowerCase() !== 'n' && userAnswer.toLowerCase() !== 'no') {
-    // ...
-    // console.log('i\'m in the while');
     userAnswer = prompt(promptQuestion);
   }
-  // console.log('second one ', userAnswer);
   return userAnswer.toLowerCase();
 }
 
 function guessingNumber() {
-  // add more question takes a numiric input use propmt
-  // use too high too low hints for the number
-  // give the user 4 oppurtonities
-  // use loop and tell the user the correct answer
-
-  let guess = Number(prompt('Try to guess the number'));
-  // console.log(guess);
-  let myNum = Math.floor(Math.random() * 10 + 1); // 0.0 - 1
-  // strict (4 attempts)
+  let guess = Number(prompt(promptTexts.guessingNumber.questionText));
+  let myNum = Math.floor(Math.random() * 10 + 1);
 
   for (let index = 0; index < 4; index++) {
     let attempts;
     if (guess > myNum) {
-      alert('you guess was higher!');
+      alert(promptTexts.guessingNumber.tooHighNumber);
       attempts = 3 - index;
-      guess = Number(prompt('Try to guess the number, left attempts: ' + attempts));
-      // console.log(guess);
+      guess = Number(prompt(`${promptTexts.guessingNumber.questionText}, left attempts: ${attempts}`));
+
     } else if (guess < myNum) {
-      alert('you guess was lower!');
+      alert(promptTexts.guessingNumber.tooLowNumber);
       attempts = 3 - index;
-      guess = Number(prompt('Try to guess the number, left attempts: ' + attempts));
-      // console.log(guess);
+      guess = Number(prompt(`${promptTexts.guessingNumber.questionText}, left attempts: ${attempts}`));
+
     } else if (guess === myNum) {
       attempts = index + 1;
-      alert('you guess it right with: ' + attempts + ' attempts');
+      alert(`${promptTexts.guessingNumber.rightGuess} with: ${attempts} attempts`);
       score++;
-      // console.log(score);
       break;
     }
 
   }
   if (guess !== myNum) {
-    alert('Game Over! the correct guess is ' + myNum);
+    alert(`${promptTexts.guessingGame.rightGuess} ${myNum}`);
   }
 }
 
 function guessingArray() {
-  // add more question that have many possibalites stored in array
-  // give user 6 attempts to guess the correct answer
-  // the game will end once the user gueesed it right or he ran out of attempts
-  // use loop for this feature
-  // console.log through the code to track the q
   let myFavArr = ['The Shawshank Redemption', 'The Godfather', 'Schindler\'s List', 'Inception'];
+  let guess = prompt(promptTexts.guessingGame.questionText);
 
-  let guess = prompt('Try to guess my favorite Movies');
-  // console.log(guess);
-
-  // strict (6 attempts)
   for (let index = 0; index < 6; index++) {
-    // let attempts;
-    // attempts = 3 - index;
-    //   guess = prompt('Try to guess my favorite Movies, left attempts: ' + attempts);
     let condition = false;
-    // alert(1);
     for (let item = 0; item < myFavArr.length; item++) {
-      // element = myFavArr[item];
-      //prompt
-      // if checking
-      // alert
-      // alert(2);
       if (guess === myFavArr[item]) {
-        // alert(3);
-        console.log(guess === myFavArr[item]);
         condition = true;
         break;
       }
-
     }
-
     if (condition) {
-      // alert(4);
-      alert('you guessed it right!');
+      alert(promptTexts.guessingGame.rightGuess);
       score++;
       break;
     }
-    alert('You are wrong! try again');
-    guess = prompt('Try to guess my favorite Movies');
-
-    // alert(5);
-
+    alert(promptTexts.guessingGame.wrongGuess);
+    guess = prompt(promptTexts.guessingGame.questionText);
   }
-
 }
 
 
@@ -168,13 +176,9 @@ function headerChanger(name) {
 }
 
 wlecomingUser();
-
 askingForInput();
-
 guessingNumber();
 guessingArray();
 alert('Your score is: ' + score + '/7');
-
-// Lab 3 instructions
 
 
